@@ -8,4 +8,7 @@ module Main where
     | True `elem` [((round x) `mod` n == 0) | n <- map round [2..sqrt x]] = False
     | otherwise                                                           = True
 
+  nextPrime :: Float -> Float
+  nextPrime n = if prime (n + 1) then n + 1 else nextPrime (n + 1)
+
   primeNth x = head (drop (x - 1) (take (x) [n | n <- [1..], prime n]))
