@@ -1,3 +1,3 @@
 module Main where
 
-  pe20 = sum [read [x] | x <- show $ product [x | x <- [1..100]]]
+  pe20 = sum [read [x] | x <- show $ product [1..100]]
