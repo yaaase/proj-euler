@@ -4,5 +4,5 @@
     next if c**2 != a**2 + b**2
     break if a + b + c > 1000
     puts a*b*c if a+b+c == 1000
-  }   
+  }
 }
