@@ -1,4 +1,4 @@
-require './pe41'
+require_relative './pe41'
 
 describe Pe41 do
   it "generates all anagrams of a string" do
