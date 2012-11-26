@@ -10,7 +10,7 @@ class Hand
   end
 
   def pair
-    if (unique_sets(1) { |num| num == 2 }) && !three_of_a_kind
+    if unique_sets(1) { |num| num == 2 }
       sets_of(2)
     end
   end
@@ -42,7 +42,7 @@ class Hand
   end
 
   def full_house
-    if (unique_sets(1) { |num| num == 2 }) && three_of_a_kind
+    if pair && three_of_a_kind
       sets_of(2) + three_of_a_kind
     end
   end
@@ -54,7 +54,7 @@ class Hand
   end
 
   def straight_flush
-    if straight && flush && !(@ranks == [10,11,12,13,14])
+    if straight && flush
       @ranks
     end
   end
