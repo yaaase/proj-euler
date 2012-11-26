@@ -1,5 +1,4 @@
 class Card
-  include Comparable
   attr_reader :rank, :suit
 
   CARD_RANKS = {
@@ -27,10 +26,6 @@ class Card
 
   def initialize rank, suit
     @rank, @suit = CARD_RANKS[rank], SUITS[suit]
-  end
-
-  def <=> other
-    rank <=> other.rank
   end
 
   def == other
