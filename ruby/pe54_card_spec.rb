@@ -23,4 +23,5 @@ describe Card do
     king = Card.new "K", "S"
     ace.should_not == king
   end
+
 end

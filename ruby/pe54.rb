@@ -8,7 +8,7 @@ class ProblemFiftyFour
   def winner hand_one, hand_two
     first_hand, second_hand = parse_hands(hand_one, hand_two)
     winner = @hc.winner(first_hand, second_hand)
-    return (winner == first_hand) ? hand_one : hand_two
+    return (winner == first_hand) ? :one : :two
   end
 
   def solve
@@ -17,7 +17,7 @@ class ProblemFiftyFour
     while line = file.gets
       hand_one = line.split(" ")[0..4]
       hand_two = line.split(" ")[5..9]
-      score += 1 if winner(hand_one, hand_two) == hand_one
+      score += 1 if winner(hand_one, hand_two) == :one
     end
     score
   end

@@ -10,19 +10,19 @@ class Hand
   end
 
   def pair
-    if (unique_sets(1) { |x| x == 2 }) && !three_of_a_kind
+    if (unique_sets(1) { |num| num == 2 }) && !three_of_a_kind
       sets_of(2)
     end
   end
 
   def two_pair
-    if unique_sets(2) { |x| x == 2 }
+    if unique_sets(2) { |num| num == 2 }
       sets_of(2)
     end
   end
 
   def three_of_a_kind
-    if unique_sets(1) { |x| x == 3 }
+    if unique_sets(1) { |num| num == 3 }
       sets_of(3)
     end
   end
@@ -42,13 +42,13 @@ class Hand
   end
 
   def full_house
-    if (unique_sets(1) { |x| x == 2 }) && three_of_a_kind
+    if (unique_sets(1) { |num| num == 2 }) && three_of_a_kind
       sets_of(2) + three_of_a_kind
     end
   end
 
   def four_of_a_kind
-    if unique_sets(1) { |x| x == 4 }
+    if unique_sets(1) { |num| num == 4 }
       sets_of(4)
     end
   end
@@ -83,14 +83,13 @@ class Hand
   private
 
   def unique_sets size, &block
-    raise unless block
     {}.tap do |hash|
       @ranks.each do |rank|
         hash[rank] ||= 0
         hash[rank] += 1
       end
-    end.values.select do |x|
-      yield x
+    end.values.select do |value|
+      yield value
     end.size == size
   end
 end
