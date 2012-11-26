@@ -110,6 +110,12 @@ describe HandComparator do
     @hc.winner(hand_one, hand_two).should == hand_one
   end
 
+  it "fives over twos beats twos over fives" do
+    hand_one = Hand.new [@five_s, @five_d, @five_c, @two_s, @two_c]
+    hand_two = Hand.new [@two_s, @two_d, @two_h, @five_s, @five_d]
+    @hc.winner(hand_one, hand_two).should == hand_one
+  end
+
   it "fives over threes beats fives over twos" do
     hand_one = Hand.new [@five_s, @five_d, @five_c, @three_s, @three_d]
     hand_two = Hand.new [@five_s, @five_d, @five_c, @two_s, @two_c]

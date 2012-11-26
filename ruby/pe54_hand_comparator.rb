@@ -43,12 +43,16 @@ class HandComparator
   end
 
   def best_full_house hand_one, hand_two
-    one = hand_one.full_house
-    two = hand_two.full_house
-    if one.max == two.max
-      one.min > two.min ? hand_one : hand_two
+    one_trips = hand_one.sets_of(3).max
+    two_trips = hand_two.sets_of(3).max
+
+    one_dubs = hand_one.sets_of(2).max
+    two_dubs = hand_two.sets_of(2).max
+
+    if one_trips != two_trips
+      one_trips > two_trips ? hand_one : hand_two
     else
-      one.max > two.max ? hand_one : hand_two
+      one_dubs > two_dubs ? hand_one : hand_two
     end
   end
 
