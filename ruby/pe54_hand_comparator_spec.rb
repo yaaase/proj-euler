@@ -17,7 +17,7 @@ describe HandComparator do
     "K" => "king"
   }
 
-  before(:each) do
+  before(:all) do
     %w[A 2 3 4 5 6 7 8 9 T J Q K].each do |rank|
       %w[S D C H].each do |suit|
         eval "@#{CARDS[rank]}_#{suit.downcase} = Card.new(rank, suit)"

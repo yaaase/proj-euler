@@ -17,17 +17,12 @@ describe Hand do
     "K" => "king"
   }
 
-  before(:each) do
+  before(:all) do
     %w[A 2 3 4 5 6 7 8 9 T J Q K].each do |rank|
       %w[S D C H].each do |suit|
         eval "@#{CARDS[rank]}_#{suit.downcase} = Card.new(rank, suit)"
       end
     end
-  end
-
-  it "knows the highest unpaired card" do
-    hand = Hand.new [@ace_s, @ace_c, @two_d, @three_d, @ten_s]
-    hand.highest_unpaired_card.should == 10
   end
 
   it "knows one pair" do
@@ -45,14 +40,9 @@ describe Hand do
     hand.two_pair.should be_true
   end
 
-  it "knows two pair and the value associated with the high pair" do
+  it "knows two pair and the values associated with the pairs" do
     hand = Hand.new [@ace_s, @ace_c, @two_d, @ten_s, @ten_c]
     hand.two_pair.should == [10, 14]
-  end
-
-  it "knows the highest unpaired card when there are pairs" do
-    hand = Hand.new [@ace_s, @ace_c, @two_d, @ten_s, @ten_c]
-    hand.highest_unpaired_card.should == 2
   end
 
   it "knows three of a kind" do

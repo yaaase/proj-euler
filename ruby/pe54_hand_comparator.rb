@@ -14,12 +14,12 @@ class HandComparator
   ]
 
   def winner hand_one, hand_two
-    one, two = determine_hand_values(hand_one, hand_two)
+    one, two = determine_hand_ranks(hand_one, hand_two)
 
     if one != two # different hands, clear winner
       return one > two ? hand_one : hand_two
     elsif one == two && one != 0 # same hands
-      best HANDS[one - 1], hand_one, hand_two
+      return best HANDS[one - 1], hand_one, hand_two
     else # two high cards
       return high_card_comparison(hand_one, hand_two)
     end
@@ -65,7 +65,7 @@ class HandComparator
     end
   end
 
-  def determine_hand_values hand_one, hand_two
+  def determine_hand_ranks hand_one, hand_two
     one = two = 0
     HANDS.each_with_index do |hand, val|
       if hand_one.send(hand)
@@ -79,9 +79,9 @@ class HandComparator
   end
 
   def high_card_comparison hand_one, hand_two
-    mutual = hand_one.sets_of_n(1) & hand_two.sets_of_n(1)
-    one = hand_one.sets_of_n(1) - mutual
-    two = hand_two.sets_of_n(1) - mutual
+    mutual = hand_one.sets_of(1) & hand_two.sets_of(1)
+    one = hand_one.sets_of(1) - mutual
+    two = hand_two.sets_of(1) - mutual
     one.max > two.max ? hand_one : hand_two
   end
 

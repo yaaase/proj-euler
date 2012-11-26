@@ -9,25 +9,21 @@ class Hand
     @suits = cards.map(&:suit)
   end
 
-  def highest_unpaired_card
-    sets_of_n(1).max
-  end
-
   def pair
     if (unique_sets(1) { |x| x == 2 }) && !three_of_a_kind
-      sets_of_n(2)
+      sets_of(2)
     end
   end
 
   def two_pair
     if unique_sets(2) { |x| x == 2 }
-      sets_of_n(2)
+      sets_of(2)
     end
   end
 
   def three_of_a_kind
     if unique_sets(1) { |x| x == 3 }
-      sets_of_n(3)
+      sets_of(3)
     end
   end
 
@@ -47,13 +43,13 @@ class Hand
 
   def full_house
     if (unique_sets(1) { |x| x == 2 }) && three_of_a_kind
-      sets_of_n(2) + three_of_a_kind
+      sets_of(2) + three_of_a_kind
     end
   end
 
   def four_of_a_kind
     if unique_sets(1) { |x| x == 4 }
-      sets_of_n(4)
+      sets_of(4)
     end
   end
 
@@ -64,10 +60,12 @@ class Hand
   end
 
   def royal_flush
-    straight && flush && (@ranks == [10,11,12,13,14])
+    if straight && flush && (@ranks == [10,11,12,13,14])
+      @ranks
+    end
   end
 
-  def sets_of_n num
+  def sets_of num
     {}.tap do |hash|
       @ranks.each do |rank|
         hash[rank] ||= 0
@@ -78,7 +76,14 @@ class Hand
     end.keys
   end
 
+  def == other
+    @cards == other.cards
+  end
+
+  private
+
   def unique_sets size, &block
+    raise unless block
     {}.tap do |hash|
       @ranks.each do |rank|
         hash[rank] ||= 0
@@ -87,9 +92,5 @@ class Hand
     end.values.select do |x|
       yield x
     end.size == size
-  end
-
-  def == other
-    @cards == other.cards
   end
 end
