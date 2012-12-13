@@ -5,7 +5,7 @@ module Main where
   prime x
     | x <= 1                                                                    = False
     | x `mod` 2 == 0                                                            = False
-    | True `elem` [x `mod` n == 0 | n <- [2..truncate (sqrt (fromIntegral x))]] = False
+    | True `elem` [x `mod` n == 0 | n <- [2..truncate $ sqrt $ fromIntegral x]] = False
     | otherwise                                                                 = True
 
   nextPrime :: Integer -> Integer
