@@ -14,4 +14,4 @@ class ProblemThirtyOne
 end
 
 time, p = Time.now, ProblemThirtyOne.new
-puts "Solved: #{p.combinations_for(200)} in #{Time.now - time} seconds."
+#puts "Solved: #{p.combinations_for(200)} in #{Time.now - time} seconds."

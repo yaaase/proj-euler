@@ -24,4 +24,4 @@ time, lychral_numbers = Time.now, []
   lychral_numbers << number if lychral? number
 end
 
-puts "Solved: #{lychral_numbers.size} in #{Time.now - time} seconds"
+#puts "Solved: #{lychral_numbers.size} in #{Time.now - time} seconds"

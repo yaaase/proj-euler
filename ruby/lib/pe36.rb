@@ -8,4 +8,4 @@ list = []
   end
 end
 
-puts list.inject(0,&:+)
+#puts list.inject(0,&:+)

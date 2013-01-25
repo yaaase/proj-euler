@@ -26,4 +26,4 @@ class ProblemFiftyTwo
 end
 
 time = Time.now
-puts "Solved: #{ProblemFiftyTwo.solve} in #{Time.now - time} seconds."
+#puts "Solved: #{ProblemFiftyTwo.solve} in #{Time.now - time} seconds."

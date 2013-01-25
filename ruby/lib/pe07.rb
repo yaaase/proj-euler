@@ -6,4 +6,4 @@ while primes.length <= 10001
     primes << n
   end
 end
-puts primes[-1]
+#puts primes[-1]

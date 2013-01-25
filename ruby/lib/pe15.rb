@@ -7,4 +7,4 @@ def factorial x
 end
 
 time = Time.now
-puts "Solved: #{routes(20)} in #{Time.now - time} seconds"
+#puts "Solved: #{routes(20)} in #{Time.now - time} seconds"

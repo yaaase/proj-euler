@@ -7,4 +7,4 @@ amicable = (2..9999).select do |n|
   sum != n and n == divisor_sum(sum)
 end
 
-puts amicable.inject(0,&:+)
+#puts amicable.inject(0,&:+)

@@ -16,4 +16,4 @@ count = 0
 3.upto(100_000) do |n|
   count += n if sum_of_factorial(n)
 end
-puts count
+#puts count

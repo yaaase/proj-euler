@@ -10,7 +10,7 @@ describe Permutator do
   end
 
   it "finds the damn solution" do
-    p.permutations(0,1,2,3,4,5,6,7,8,9)[1_000_000].should ==
+    p.permutations(0,1,2,3,4,5,6,7,8,9)[999_999].should ==
       "2783915460"
   end
 

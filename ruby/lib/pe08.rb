@@ -10,4 +10,4 @@ highest = 0
   start_index += 1
 end
 
-puts highest
+#puts highest

@@ -23,4 +23,4 @@ pandigitals.permutation.map(&:join).map(&:to_i).each do |perm|
   sum += perm if p.substring_divisible?(perm)
 end
 
-puts "Solved: #{sum} in #{Time.now - time} seconds."
+#puts "Solved: #{sum} in #{Time.now - time} seconds."

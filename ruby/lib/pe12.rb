@@ -23,4 +23,4 @@ while true
   start += 1
 end
 
-puts triangle_generator(start)
+#puts triangle_generator(start)

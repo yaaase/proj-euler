@@ -77,4 +77,4 @@ def problem_seventeen
 end
 
 time = Time.now
-puts "Solved: #{problem_seventeen} in #{Time.now - time} seconds"
+#puts "Solved: #{problem_seventeen} in #{Time.now - time} seconds"

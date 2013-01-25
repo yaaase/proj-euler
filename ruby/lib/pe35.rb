@@ -10,4 +10,4 @@ Prime.each(1_000_000) do |p|
   end
   counter += 1 if !set.map(&:prime?).include?(false)
 end
-puts counter
+#puts counter

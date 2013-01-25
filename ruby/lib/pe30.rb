@@ -20,4 +20,4 @@ class ProblemThirty
 end
 
 time = Time.now
-puts "Solved: #{ProblemThirty.new.sum_of_all_for_power(5)} in #{Time.now - time} seconds."
+#puts "Solved: #{ProblemThirty.new.sum_of_all_for_power(5)} in #{Time.now - time} seconds."
