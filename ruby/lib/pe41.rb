@@ -18,4 +18,4 @@ max = 0
   attempt = Pe41.max_1_to_n_pandigital_prime(num)
   max = attempt if attempt > max
 end
-#puts "Solved: #{max} in #{Time.now - time} seconds"
+puts "Solved: #{max} in #{Time.now - time} seconds"

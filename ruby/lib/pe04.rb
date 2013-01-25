@@ -5,4 +5,4 @@ s = 0
     s = n if n.to_s.reverse.to_i == n and n > s
   }
 }
-#puts s
+puts s

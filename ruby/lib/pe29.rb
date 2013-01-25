@@ -9,4 +9,4 @@ def distinct_powers_to_limit n
 end
 
 time = Time.now
-#puts "Solved: #{distinct_powers_to_limit(100).size} in #{Time.now - time} seconds."
+puts "Solved: #{distinct_powers_to_limit(100).size} in #{Time.now - time} seconds."

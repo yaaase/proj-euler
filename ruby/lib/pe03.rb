@@ -8,4 +8,4 @@ Prime.each do |p|
   n = p if n < p
 end
 
-#puts n
+puts n

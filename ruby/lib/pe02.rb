@@ -5,4 +5,4 @@ while b < 4_000_000
   a, b = b, a + b
 end
 
-#puts sum
+puts sum

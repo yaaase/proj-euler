@@ -27,4 +27,4 @@ winner = 1
 (1..1_000_000).map.each do |n|
   winner = n if collatz(n) > collatz(winner)
 end
-#puts winner
+puts winner

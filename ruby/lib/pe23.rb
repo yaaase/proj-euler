@@ -31,4 +31,4 @@ def problem_twenty_three
 end
 
 time = Time.now
-#puts "Solved: #{problem_twenty_three} in #{Time.now - time} seconds"
+puts "Solved: #{problem_twenty_three} in #{Time.now - time} seconds"
