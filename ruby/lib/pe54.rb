@@ -13,7 +13,7 @@ class ProblemFiftyFour
 
   def solve
     score = 0
-    file = File.open("./poker.txt","r")
+    file = File.open("/home/mark/pe/ruby/lib/poker.txt","r")
     while line = file.gets
       hand_one = line.split(" ")[0..4]
       hand_two = line.split(" ")[5..9]

@@ -1,4 +1,4 @@
-require_relative './pe43'
+require_relative '../lib/pe43'
 
 describe ProblemFortyThree do
 

@@ -34,7 +34,7 @@ class ProblemTwentyTwo
 end
 
 def problem_twenty_two
-  file, names = File.open('./names.txt', 'r'), []
+  file, names = File.open('/home/mark/pe/ruby/lib/names.txt', 'r'), []
   while line = file.gets
     names = line.gsub(/"/,"").split(",").sort
   end

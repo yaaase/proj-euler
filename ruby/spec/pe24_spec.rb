@@ -1,4 +1,4 @@
-require_relative './pe24'
+require_relative '../lib/pe24'
 
 describe Permutator do
 

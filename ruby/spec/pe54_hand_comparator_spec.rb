@@ -1,4 +1,4 @@
-require_relative './pe54_hand_comparator'
+require_relative '../lib/pe54_hand_comparator'
 
 describe HandComparator do
   CARDS = {

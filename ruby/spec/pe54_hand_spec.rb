@@ -1,4 +1,4 @@
-require_relative './pe54_hand'
+require_relative '../lib/pe54_hand'
 
 describe Hand do
   CARDS = {

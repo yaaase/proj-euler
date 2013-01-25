@@ -1,4 +1,4 @@
-require_relative './pe52'
+require_relative '../lib/pe52'
 
 describe ProblemFiftyTwo do
 

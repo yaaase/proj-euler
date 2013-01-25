@@ -1,4 +1,4 @@
-require_relative './pe17'
+require_relative '../lib/pe17'
 
 describe NumberWordHash do
   it { described_class[1].should == "one" }

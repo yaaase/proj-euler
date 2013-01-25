@@ -1,4 +1,4 @@
-require_relative './pe29'
+require_relative '../lib/pe29'
 
 describe "problem 29" do
 

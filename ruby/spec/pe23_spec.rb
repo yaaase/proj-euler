@@ -1,4 +1,4 @@
-require_relative './pe23'
+require_relative '../lib/pe23'
 
 describe ProblemTwentyThree do
   before(:each) { @p = ProblemTwentyThree.new }
