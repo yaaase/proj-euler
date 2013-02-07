@@ -10,9 +10,8 @@ int main(int argc, char *argv[])
     sum_of_squares = sum_of_squares + (x * x);
   }
 
-  int y;
-  for(y = 1; y <= 100; y++) {
-    square_of_sums = square_of_sums + y;
+  for(x = 1; x <= 100; x++) {
+    square_of_sums = square_of_sums + x;
   }
 
   square_of_sums = (square_of_sums * square_of_sums);
