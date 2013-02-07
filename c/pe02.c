@@ -8,10 +8,8 @@ int main(int argc, char *argv[])
   int limit = 4000000;
   int sum = 0;
 
-  while(b < limit)
-  {
-    if(b % 2 == 0)
-    {
+  while(b < limit) {
+    if(b % 2 == 0) {
       sum = sum + b;
     }
     c = a;
