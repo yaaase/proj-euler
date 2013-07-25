@@ -9,5 +9,4 @@
   [x]
   (reduce +
     (filter even?
-      (take-while (partial > x)
-        fib-seq))))
+      (take-while (partial > x) fib-seq))))
