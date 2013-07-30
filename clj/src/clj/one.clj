@@ -6,5 +6,5 @@
   (reduce +
     (distinct
       (concat
-        (filter #(= 0 (mod % 3)) (range 1 x))
-        (filter #(= 0 (mod % 5)) (range 1 x))))))
+        (filter #(zero? (mod % 3)) (range 1 x))
+        (filter #(zero? (mod % 5)) (range 1 x))))))
