@@ -17,10 +17,11 @@ def triangle_generator(n)
   num
 end
 
+time = Time.now
 start = 1
 while true
   break if divisors(triangle_generator(start)) > 500
   start += 1
 end
 
-puts triangle_generator(start)
+puts "Solved: #{triangle_generator(start)} in #{Time.now - time} seconds."
